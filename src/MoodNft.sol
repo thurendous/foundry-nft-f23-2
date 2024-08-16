@@ -29,7 +29,7 @@ contract MoodNft is ERC721 {
         s_tokenCounter++;
     }
 
-    function changeMood(uint256 tokenId) public {
+    function flipMood(uint256 tokenId) public {
         address owner = _ownerOf(tokenId); // Get the owner of the token
         if (!_isAuthorized(owner, msg.sender, tokenId)) {
             revert NotApprovedOrOwner();
